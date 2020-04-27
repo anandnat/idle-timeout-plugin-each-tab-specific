@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+<meta charset="UTF-8">
+<title>Idle Timeout Plugin- Each Tab Specific</title>
+<meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     
+	 <h3 id="my"><h3>
+
+    </div>
+    
+  </div>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="idle-time-plugin.js"></script>
+
+<script>
+         $("#my").NatIdleTime({
+    idleTime:3000,
+    onActive: function(s){
+      console.log(s);
+    },
+       onInactive: function(s){
+        $("#my").append("<br> Idle : " + s);
+       }
+  });
+          
+</script>
+
+
+</body></html>
